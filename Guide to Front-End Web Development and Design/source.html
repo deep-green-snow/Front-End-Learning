@@ -5,54 +5,67 @@
     <title>HTML CSS</title>
     <meta name="description" content="whatever we want">
     <link rel="stylesheet" href="style.css" >
+    <!-- Linking javascript -->
+    <!-- <script>
+        alert('Page Hello');
+    </script> -->
 </head>
 <body>
     <!-- Note to Self create content in the body -->
-    <header>
-    <h1>Contact Us Here</h1>
-    </header>
-    <nav>
-    <ul >
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" >Contact</a></li>
-    </ul>
-    </nav>
-    
-    <article>
-    <form action="about.html" method="get" target="_blank" >
-        Username:<BR>
-        <input type="text" name="username" placeholder="enter a name here" required><BR>
-        Email:<BR>
-        <input type="email" name="email" value="myemail@newemail.com"><BR>
-        Password:<BR>
-        <input type="password" name="password"><BR>
-        Age:<BR>
-        Image <input type="file" name="myFile" > 
-        <BR>
-        <textarea name="moreinfo">Here is the content</textarea>
-        <BR>
-        <input type="number" name="myage"><BR>
+    <div> <!-- </div>style="background-color: yellow;">-->
+        <header id="myHeader">
+            <!-- Linking javascript -->
+            <!-- <h1 onclick="javascript:alert('Hello');"> Contact Us Here</h1> -->
+            <section>
+                <h1>Welcome to my Website</h1>
+            </section>
+        </header>
+        
+        <nav>
+        <ul>
+            <li><a href="index.html"><span class="myClass">Home</span><span>Home</span></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+        </nav>
+        
+        <article class="myClass">
+        <form action="about.html" method="get" target="_blank" >
+            Username:<BR>
+            <input type="text" name="username" placeholder="enter a name here" required><BR>
+            Email:<BR>
+            <input type="email" name="email" value="myemail@newemail.com"><BR>
+            Password:<BR>
+            <input type="password" name="password"><BR>
+            Age:<BR>
+            Image <input type="file" name="myFile" > 
+            <BR>
+            <textarea name="moreinfo">Here is the content</textarea>
+            <BR>
+            <input type="number" name="myage"><BR>
 
-        <input type="radio" name="radiomy" value="Yes" checked> Yes |
-        <input type="radio" name="radiomy" value="No" > No<BR>
+            <input type="radio" name="radiomy" value="Yes" checked> Yes |
+            <input type="radio" name="radiomy" value="No" > No<BR>
 
-        <select name="mySel">
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-        </select>
+            <select name="mySel">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            </select>
 
-        <input type="checkbox" name="myCheck1" value="checked 1" > Checkme <BR>
-        <input type="checkbox" name="myCheck2" value="checked 2" > Checkme <BR>
+            <input type="checkbox" name="myCheck1" value="checked 1" > Checkme <BR>
+            <input type="checkbox" name="myCheck2" value="checked 2" > Checkme <BR>
 
-        <input type="color" name="myColor"> Color<BR>
+            <input type="color" name="myColor"> Color<BR>
 
-        <input type="date" name="mydate"> Date<br>
+            <input type="date" name="mydate"> Date<br>
 
-        <input type="submit" value="Enter" >
-    </form>
-    </article>
-    <footer>Copyright</footer>
+            <input type="submit" value="Enter" >
+        </form>
+        </article>
+        <footer class="myClass">Copyright</footer>
+    </div>
+    <!-- Linking javascript -->
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>

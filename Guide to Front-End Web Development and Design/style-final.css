@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Sevillana);
+body {
+    font-size: 16px;
+    line-height: 18px;
+    color: #111111;
+    font-family: 'Sevillana', cursive;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+}
+
+#wrapper {
+    max-width: 1140px;
+    margin: auto;
+}
+
+#myNav {
+    background-color: #333;
+    color: #efefef;
+    height: 60px;
+    margin: 10px 0;
+}
+
+#myNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#myNav ul li {
+    float: left;
+}
+
+#myNav ul li a {
+    margin-right: 5px;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    background-color: #ddd;
+    color: #000;
+    width: 100px;
+    position: relative;
+    text-decoration: none;
+}
+
+#myNav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#myContainer {
+    background-color: #ddd;
+    min-height: 800px;
+}
+
+#sMenu {
+    float: left;
+    width: 29%;
+    padding: 1%;
+    height: 400px;
+}
+
+#sMenu h1 {
+    text-align: center;
+}
+
+#myContent {
+    float: left;
+    width: 67%;
+    padding: 1%;
+    background-color: #fff;
+}
+
+.clear {
+    clear: both;
+}
+
+.myImg {
+    float: left;
+    margin: 10px;
+}
+
+#myFooter {
+    background-color: #000;
+    color: #fff;
+    height: 100px;
+    text-align: center;
+}
+
+#myHeader {
+    color: #fff;
+    text-align: center;
+    background: #eeeeee url("http://lorempixel.com/400/200") no-repeat center;
+    background-size: cover;
+    height: 200px;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    min-width: 100px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #000000;
+    color: yellow;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        background-color: blue;
+    }
+    #myNav ul li a {
+        width: 95%;
+        padding: 2px;
+        height: 35px;
+    }
+    #myNav ul li {
+        width: 25%;
+    }
+    #sMenu {
+        float: none;
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+    th,
+    td {
+        padding: 0px;
+        min-width: auto;
+    }
+    .myImg {
+        float: none;
+        margin: 0;
+        width: 100%;
+    }
+    #myContent {
+        float: none;
+        width: 100%;
+        padding: 0;
+    }
+    #myNav {
+        margin: 0;
+    }
+    #sMenu h1 {
+        margin: 0;
+    }
+}

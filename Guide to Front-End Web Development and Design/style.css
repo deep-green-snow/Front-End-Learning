@@ -1,8 +1,129 @@
-/* body{
-    background-color: blue;
-} */
+/*
+External File Source
+
+<script src="script.js"></script>
+
+<link rel="stylesheet" href="style.css" >
+
+Onpage CSS and JavaScript
+
+<script> alert('Page Hello'); </script>
+
+<style> div{ background-color:yellow; } </style>
+
+InLine Style and JavaScript
+
+<header style="background-color:yellow;"> <h1 onclick="javascript:alert('Hello');">Welcome to my Website</h1> <p>tag line</p> </header>
+*/
+
+span[data-descr] {
+    position: relative;
+    text-decoration: underline;
+    color: #00F;
+    cursor: help;
+  }
+  
+  span[data-descr]:hover::after {
+    content: attr(data-descr);
+    position: absolute;
+    left: 0;
+    top: 24px;
+    min-width: 200px;
+    border: 1px #aaaaaa solid;
+    border-radius: 10px;
+    background-color: #ffffcc;
+    padding: 12px;
+    color: #000000;
+    font-size: 14px;
+    z-index: 1;
+  }
+
+#contactMe{
+    position :static     ;
+    left: 50px;
+    top: 150px;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    background-color: orange;
+
+}
+
+#myNav ul li a{
+    background-color: #ddd;
+    display: inline-block;
+    width: 100px;
+}
+
+.myWorld{
+    background-color: yellow;
+    /* display: block; */
+    /* display: inline; */
+}
+
+tbody tr:nth-child(odd){
+    background-color:#000000;
+    color:yellow;
+}
+    
+#myNav ul li a:hover{
+background-color:#000;
+color:#fff;
+}
+
+.myWorld:first-Child{
+display:block;
+background-color: yellow;
+}
+
+span::after {
+content: "My SPAN is Here!";
+background-color:red;
+}
+
+
+.myBox{
+    /* display: list-item;
+    visibility: hidden; */
+    /* padding-bottom: 10px;
+    padding-left:  10px;
+    padding-right: 15px;
+    padding-top: 20px; */
+    background-color: #eee;
+    margin : 5px 10px 15px 20px;
+    padding : 5px 10px 15px 20px;
+    border: 1px solid blue;
+    border-radius: 3em 42px 5%;
+}
+
+.myClass{
+    color: aqua;
+}
+#myHeader{
+    color: #fff;
+    text-align: center;
+}
+
+h1{
+    /* color: red; */
+    color: rgba(0,0,255,0.5);
+    text-align: center;
+    /* background-color: rgba(0,0,255,0.5);
+    background-image: url("http://lorempixel.com/400/200/sports");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  */
+    /*auto;*/ /*1000px 500px;*/
+    background: #eeee url("http://lorempixel.com/400/200/sports") no-repeat center;
+    height: 200px;
+}
+
 
 th, td{
     padding: 10px;
     min-width: 100px; 
+}
+
+span{
+
 }
