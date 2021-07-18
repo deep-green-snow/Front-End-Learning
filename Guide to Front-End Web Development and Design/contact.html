@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- What the contents of website? Titles? -->
+<head>
+    <meta charset="utf-8">
+    <title> HTMLL_CSS </title>
+    <meta name="description" content="whatever we want">
+    
+    <!-- Linking rather than style tag -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- Visually presented to users -->
+<body>
+    
+    <h1>Contact us here</h1>
+    <ol>
+        <li><a href="home.html"> Home </a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ol>
+
+    <!-- Pass html data to other html -->
+    <form action="about.html" method="GET" autocomplete="on" target="_blank">
+        Username:<br>
+        <!-- Required : make it required field -->
+        <input type="text" name="username" placeholder="enter a name here" required><br>
+        Email:<br>
+        <input type="email" name="email" value="lll@llll.com"><br>
+        Password:<br>
+        <input type="password" name="password"><br>
+        Age:<br>
+        <input type="number" name="myage"><br>
+        <input type="radio" name="radioyes" value="yes" checked>YES
+        <input type="radio" name="radiono" value="no">NO <br>
+        
+        <select name="mysql">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select><br>
+
+        Image : <input type="file" name="myfile"><br>
+        <textarea name="moreinfo">Here is the Content</textarea><br>
+
+        <!-- Value is the value passed over when submit -->
+        <input type="checkbox" name="check1" value="checked 1"> Checkme <br>
+        <input type="checkbox" name="check2" value="checked 2"> Checkme <br>
+        <input type="checkbox" name="check3" value="checked 3"> Checkme <br>
+
+        <input type="color" name="color" > Color <br>
+        <input type="date" name="data" > Date <br>
+
+        <input type="submit" value="Enter"><br>
+    </form>
+</body>
+</html>
