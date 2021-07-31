@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning by Discoveryvip</title>
+    <style>
+        .btn {
+            padding: 5px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .oput {
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        A
+        <input type="number" name="numA" id="numA" value="6">
+        <br> B
+        <input type="number" name="numB" id="numB" value="33">
+        <div>
+            <div id="btn1" class="btn">Button 1</div>
+            <BR>
+            <div id="btn2" class="btn">Button 2</div>
+        </div>
+        <div> Output :
+            <div id="output" class="oput">nothing</div>
+            <div id="output2" class="oput">nothing</div>
+        </div>
+    </div>
+
+    <script>
+        var btn1Click = document.getElementById("btn1");
+        var btn2Click = document.getElementById("btn2");
+        var output = document.getElementById("output");
+        var output2 = document.getElementById("output2");
+
+        btn1Click.onclick = myFun;
+        btn2Click.onclick = myFun2;
+
+        function myFun() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+            if (a < b) {
+                output.innerHTML = "a LESS THAN b";
+            } else if (a == b) {
+                output.innerHTML = "a is EQUAL to b";
+            } else {
+                output.innerHTML = "a MORE THAN b";
+            }
+        }
+
+        function myFun2() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+
+        }
+
+        function myFun3() {
+            var a = parseInt(document.getElementById("numA").value);
+            switch (a) {
+            case "0":
+                myContainer = "ZERO";
+                break
+            case 2:
+                myContainer = "TWO";
+                break
+            case "7":
+                myContainer = "SEVEN";
+                break
+            default:
+                myContainer = "NOTHING HERE";
+
+            }
+            output.innerText = myContainer;
+
+        }
+    </script>
+</body>
+
+</html>

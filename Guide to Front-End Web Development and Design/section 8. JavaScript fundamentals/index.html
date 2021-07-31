@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning by Discoveryvip</title>
+    <style>
+        .btn {
+            padding: 5px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        A
+        <input type="number" name="numA" id="numA" value="6">
+        <br> B
+        <input type="number" name="numB" id="numB" value="33">
+        <div>
+            <div id="btn1" class="btn">Get Result</div>
+            <BR>
+            <div id="btn2" class="btn">Do Something when Clicked</div>
+        </div>
+        <div> Output :
+            <div id="output">nothing</div>
+        </div>
+        <ul id="myList">
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+            <li>One</li>
+        </ul>
+    </div>
+
+    <script>
+        var btn1Click = document.getElementById("btn1");
+        var btn2Click = document.getElementById("btn2");
+        var output = document.getElementById("output");
+        var myList = document.getElementById("myList");
+        var myItems = myList.getElementsByTagName("li");
+        console.log(myItems);
+        btn1Click.onclick = myFun;
+        btn2Click.onclick = function () {
+            var a = document.getElementById("numA");
+            var b = document.getElementById("numB");
+            var aa = parseInt(a.value);
+            var bb = parseInt(b.value);
+            aa++;
+            bb--;
+            a.value = aa;
+            b.value = bb;
+
+            for (var i = 0; i < myItems.length; i++) {
+                console.log(myItems[i]);
+                if (i % 2) {
+                    myItems[i].style.backgroundColor = "red";
+                }
+            }
+            ///
+        }
+
+        function myFun() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+            output.innerHTML = a + b;
+            output.style.backgroundColor = "yellow";
+
+            var status = (a > b) ? "A bigger than B" : "B bigger than A";
+            // ternary opertor
+            var c = true;
+            var d = false;
+            output.innerHTML = c && d;
+
+        }
+    </script>
+</body>
+
+</html>

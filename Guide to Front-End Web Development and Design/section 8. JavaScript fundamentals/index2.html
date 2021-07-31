@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning by Discoveryvip</title>
+    <style>
+        .btn {
+            padding: 5px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        A
+        <input type="number" name="numA" id="numA" value="6">
+        <br> B
+        <input type="number" name="numB" id="numB" value="33">
+        <div>
+            <div id="btn1" class="btn">Get Result</div>
+            <BR>
+            <div id="btn2" class="btn">Do Something when Clicked</div>
+        </div>
+        <div> Output :
+            <div id="output">nothing</div>
+            <div id="output2">nothing</div>
+        </div>
+    </div>
+
+    <script>
+        var btn1Click = document.getElementById("btn1");
+        var btn2Click = document.getElementById("btn2");
+        var output = document.getElementById("output");
+        var output2 = document.getElementById("output2");
+
+        btn1Click.onclick = myFun;
+        btn2Click.onclick = myFun2;
+
+        function myFun() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+            output.innerHTML = Math.floor(Math.random() * 1000);
+
+            var myDate = new Date();
+            console.log(myDate.getTime());
+
+        }
+
+        function myFun2() {
+            var a = parseInt(document.getElementById("numA").value);
+            var b = parseInt(document.getElementById("numB").value);
+            output.innerHTML = Math.ceil(Math.random() * a);
+        }
+    </script>
+</body>
+
+</html>
