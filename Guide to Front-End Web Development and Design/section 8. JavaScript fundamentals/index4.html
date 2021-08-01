@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Learning by Discoveryvip</title>
+    <style>
+        .btn {
+            padding: 5px;
+            border: 1px solid black;
+            display: inline-block;
+            margin: 5px;
+        }
+        
+        .oput {
+            padding: 10px;
+            margin: 10px;
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        A
+        <input type="number" name="numA" id="numA" value="6">
+
+        <div>
+            <div id="btn1" class="btn">Button 1</div>
+            <BR>
+            <div id="btn2" class="btn">Button 2</div>
+            <BR>
+            <div id="btn3" class="btn">Button 3</div>
+        </div>
+        <div> Output :
+            <div id="output" class="oput">nothing</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn1").addEventListener('click', myFun);
+        document.getElementById("btn2").addEventListener('click', myFun2);
+        document.getElementById("btn3").addEventListener('click', myFun3);
+        var output = document.getElementById("output");
+        var myContainer = "";
+
+        function myFun2() {
+            myContainer = "DO LOOP <br>";
+            var a = parseInt(document.getElementById("numA").value);
+
+            do {
+                myContainer += a + " new Number<br>";
+                a++;
+            }
+            while (a < 10);
+            output.innerHTML = myContainer;
+        }
+
+        function myFun3() {
+            myContainer = "FOR LOOP <br>";
+            var a = parseInt(document.getElementById("numA").value);
+
+            for (i = a; i < 10; i++) {
+                myContainer += i + " new Number<br>";
+            }
+
+            output.innerHTML = myContainer;
+        }
+
+        function myFun() {
+            myContainer = "WHILE LOOP <br>";
+            var a = parseInt(document.getElementById("numA").value);
+
+            while (a < 10) {
+                myContainer += a + " new Number<br>";
+                a++;
+            }
+
+            output.innerHTML = myContainer;
+        }
+    </script>
+</body>
+
+</html>
