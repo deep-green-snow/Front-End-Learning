@@ -1,0 +1,20 @@
+<div id="output" class="oput">Nothing</div>
+<button type="button" id="myBtn">Get Data</button>
+<input type="text" id="myText" value="Hello">
+<script>
+    var myContainer = "";
+    document.getElementById("myBtn").addEventListener("click", myFun);
+
+    function myFun() {
+        var myTxt = document.getElementById("myText").value;
+        var a = new XMLHttpRequest();
+        a.onreadystatechange = function () {
+            if (a.readyState == 4 && a.status == 200) {
+                document.getElementById("output").innerHTML = this.responseText;
+            }
+        }
+        a.open("POST", "data.php", true);
+        a.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        a.send("name=" + myTxt + "&age=55");
+    }
+</script>
