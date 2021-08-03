@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Course</title>
+    <meta ID="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        li:nth-child(odd) {
+            border: 1px solid #ddd;
+            width: 200px;
+            background-color: #efefef;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+            <li>Five</li>
+        </ul>
+        <input type="text" id="newItem">
+        <BR>
+        <div class="btn btn-primary">Add item</div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("ul").on("click", "li", function (event) {
+                $(this).html("clicked");
+
+            })
+
+            $("div").click(function () {
+                $("ul").append("<li>ZERO1</li>");
+
+            })
+
+        })
+    </script>
+</body>
+
+</html>

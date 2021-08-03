@@ -1,0 +1,54 @@
+<style>
+    li {
+        border: 1px solid #ddd;
+        width: 200px;
+    }
+
+    li:nth-child(odd) {
+        border: 1px solid #ddd;
+        width: 200px;
+        background-color: #efefef;
+    }
+    .yellow{
+        background-color:yellow;
+    }
+</style>
+<ul>
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    <li>Four</li>
+    <li>Five</li>
+</ul>
+<input type="text" id="newItem">
+  <BR>
+<div class="btn btn-primary">Add item</div>
+
+<script>
+    $(document).ready(function() {
+
+        $("ul").on("click", "li", function(event) {
+            $(this).html("clicked");
+
+        })
+
+        $("div").click(function() {
+            $("ul").append("<li>" + $("#newItem").val() + "</li>");
+
+        })
+
+        $("ul").on("click", "li", function(event) {
+            if ($(this).hasClass("yellow")) {
+                $(this).removeClass("yellow");
+            } else {
+                $(this).addClass("yellow");
+            }
+        })
+
+        $("div").click(function() {
+            $("ul").append("<li>" + $("#newItem").val() + "</li>");
+
+        })
+
+    })
+</script>

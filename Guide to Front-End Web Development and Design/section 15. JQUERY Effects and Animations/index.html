@@ -1,0 +1,57 @@
+<div id="container">
+    <img id="myimage" src="http://lorempixel.com/200/200" />
+    <div id="output">Content</div>
+    <p>
+      <div class="parentone">
+        <div class="childone">
+          <p class="one">Class One</p>
+        </div>
+        <div class="childtwo">
+          <p class="two">Class Two</p>
+        </div>
+        <div class="childthree">
+          <p class="three">Class Three</p>
+        </div>
+      </div>
+    </p>
+  </div>
+  
+  <script>
+  
+  $(document).ready(function() {
+  
+    // hide / show / toggle
+    $(".one").click(function() {
+      $("#myimage").hide(5000);
+    })
+  
+    $(".two").click(function() {
+      $("#myimage").show(1000);
+    })
+  
+    $(".three").click(function() {
+      $("#myimage").toggle(3000, myFunction);
+  
+    })
+
+    // fade
+    $(".one").click(function() {
+        $("#myimage").fadeOut(5000);
+    })
+
+    $(".two").click(function() {
+        $("#myimage").fadeTo(1000,0.5,myFunction);
+    })
+
+    $(".three").click(function() {
+        $("#myimage").fadeIn(3000, myFunction);
+    })
+  
+    function myFunction() {
+      $("#output").html("WORKING 2");
+      $("#myimage").attr("src", "http://lorempixel.com/150/150");
+    }
+  
+  });
+  
+  </script>

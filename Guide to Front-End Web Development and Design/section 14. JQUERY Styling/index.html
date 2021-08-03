@@ -1,0 +1,60 @@
+<style>
+    body{
+    font-size:28px;
+    }
+    div{
+    color:blue;
+    }
+    .simpleClass{
+    background-color:green;
+    color:yellow;
+    }
+    .xone{
+    padding:5px;
+    background-color:blue;
+    color:red;
+    }
+
+</style>
+
+<div id="container">
+    <img id="myimage" src="http://lorempixel.com/200/200" />
+    <div id="output">Content</div>
+    <img src="http://lorempixel.com/100/100" />
+    <p>
+      <div class="parentone">
+        <div class="childone">
+          <p class="one">Child #1</p>
+        </div>
+        <div class="childtwo">
+          <p class="two">Child #2</p>
+        </div>
+        <div class="childthree">
+          <p class="one">Child #3</p>
+        </div>
+      </div>
+    </p>
+
+</div>
+
+
+<script>
+$(document).ready(function() {
+    // attribute
+    $("img").click(function() {
+        var mySrc = $(this).attr("src");
+        $("#output").html(mySrc);
+        $(this).attr("src", "http://lorempixel.com/150/150");
+    })
+
+    // add/remove/has class
+    $(".parentone").children().click(function() {
+      if ($(this).hasClass("simpleClass")) {
+        $(this).removeClass("simpleClass");
+      } else {
+        $(this).addClass("simpleClass");
+      }
+    })
+    //$(".parentone").children().first().css("background-color", "black");
+})
+</script>

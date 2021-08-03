@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Course</title>
+    <meta ID="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <style>
+        li:nth-child(odd) {
+            border: 1px solid #ddd;
+            width: 200px;
+            background-color: #efefef;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="output"></div>
+        <form role="form" id="myForm" action="" method="post">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Name">Your Name</label>
+                    <div class="igroup">
+                        <input type="text" class="form-control" name="Name" id="Name" placeholder="Enter Name" value="Laurence">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Email">Your Email</label>
+                    <div class="igroup">
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter Email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Message">Message</label>
+                    <div class="igroup">
+                        <textarea name="Message" id="Message" class="form-control" rows="5" required></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="ccheck">What is 5-4 </label>
+                    <div class="igroup">
+                        <input type="text" class="form-control" name="ccheck" id="ccheck" required>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <div id="somebutton" class="btn btn-danger">Click to see something</div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#somebutton").click(checkme);
+
+            function checkme(e) {
+                var err = "";
+                //console.log(e);
+                var mytarget = $(e.currentTarget);
+                //console.log(mytarget);
+                if ($("#Name").val() === "") {
+                err = err + "<BR>needs name";
+                }
+                if ($("#Email").val() === "") {
+                err = err + "<BR>needs email";
+                }
+                if ($("#Message").val() === "") {
+                err = err + "<BR>needs Message";
+                }
+                if ($("#ccheck").val() === "") {
+                err = err + "<BR>needs answer";
+                }
+
+                if (err.length > 0) {
+                $("#output").html(err);
+                } else {
+                $("#output").html("form okay");
+                $("#myForm").submit();
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

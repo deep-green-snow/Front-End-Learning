@@ -1,0 +1,73 @@
+<div id="container">
+    <div id="mySlider">
+    <img id="myimage" src="http://lorempixel.com/200/200" />
+    <div id="output">Content</div>
+    </div>
+  
+    <p>
+      <div class="parentone">
+        <div class="childone">
+          <p class="one">Class One</p>
+        </div>
+        <div class="childtwo">
+          <p class="two">Class Two</p>
+        </div>
+        <div class="childthree">
+          <p class="three">Class Three</p>
+        </div>
+      </div>
+    </p>
+  </div>
+  
+  <script>
+  
+  $(document).ready(function() {
+  
+    //slide
+    $(".one").click(function() {
+      $("#mySlider").slideUp(1000);
+    })
+  
+    $(".two").click(function() {
+      $("#mySlider").slideDown(1000, myFunction);
+    })
+  
+    $(".three").click(function() {
+      $("#mySlider").slideToggle(1000, myFunction);
+  
+    })
+
+    //animate
+    $("#mySlider").css("position", "absolute");
+    $("#mySlider").css("top", "150px");
+    $(".one").click(function() {
+        $("#mySlider").animate({
+            opacity: 0.5,
+            left: "+=100px",
+            top: "+=10px",
+            height: "toggle"
+        }, 1000, function() {
+         $("#output").html("ANIMATED");
+        });
+    })
+
+    $(".two").click(function() {
+        $("#mySlider").animate({
+            opacity: 1,
+            left: "-=100px",
+            top: "100px"
+        }, 1000, function() {
+            $("#output").html("ANIMATED");
+        });
+    })
+  
+    function myFunction() {
+      $("#output").html("WORKING 2");
+      //$("#myimage").attr("src", "http://lorempixel.com/150/150");
+    }
+  
+  });
+  
+  
+  
+  </script>

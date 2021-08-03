@@ -1,0 +1,59 @@
+<div id="container">
+    <div id="output">
+        Main output
+    </div>
+    <div class="btn btn-danger">Click 1</div>
+    <div class="btn btn-warning">Click 2</div>
+    <div class="btn btn-primary">Click 3</div>
+
+    <div class="btn btn-default one">Click 4</div>
+    <div class="btn btn-default two">Click 5</div>
+    <div class="col-sm-12">
+        <input type="text" id="Name" value="Tester">
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function () {
+    $(".btn").click(function(e){
+        if($(this).hasClass("btn-danger")){
+            //$("#output").html("CLICKed #1");
+            $("#output").load("php.php");
+        }
+
+        if($(this).hasClass("btn-warning")){
+            var newData = {
+                name: $("#Name").val()
+            };
+            $.get("php.php", newData, function (data){
+                console.log(data);
+                $("#output").html(data);
+            })
+        }
+        
+        if ($(this).hasClass("btn-primary")) {
+            $.get('php.php', function (data) {
+                console.log(data);
+                $("#output").html(data);
+            })
+        }
+        
+        if( $(this).hasClass("one")){
+            var url = "https://api.myjson.com/bins/23xvb";
+            $.getJSON(url, function(data){
+                $("#output").html("<p>FirstName: "+data.firstName+"</p>");
+                console.log(data);
+            })
+        }
+
+        
+    })
+
+
+
+});
+
+</script>
