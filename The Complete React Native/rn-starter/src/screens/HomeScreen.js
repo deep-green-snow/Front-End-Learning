@@ -1,10 +1,6 @@
 import React from "react";
 import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
 
-<<<<<<< HEAD
-const HomeScreen = () => {
-  return <Text style={styles.text}>My First Expo App !!! </Text>;
-=======
 const HomeScreen = ({navigation}) => {
   return <View>
       <Text style={styles.text}>HomeScreen</Text>
@@ -26,7 +22,6 @@ const HomeScreen = ({navigation}) => {
         <Text>Go to List Demo</Text>
       </TouchableOpacity> */}
     </View>
->>>>>>> 134c977a6d7b80914421391a4aee5be98c2d0d11
 };
 
 const styles = StyleSheet.create({
