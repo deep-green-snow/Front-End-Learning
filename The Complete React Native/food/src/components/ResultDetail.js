@@ -13,7 +13,6 @@ const ResultsDetail = ({result}) => {
     )
 };
 
-
 const styles = StyleSheet.create({
     containerStyle: {
         marginLeft: 10,

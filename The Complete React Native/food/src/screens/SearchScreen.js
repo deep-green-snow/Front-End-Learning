@@ -18,10 +18,6 @@ const SearchScreen = ( {navigation} ) => {
     return (
         // placeholder instead of <View>
         <>
-            <Button 
-                title="Go to Map API"
-                onPress={() => navigation.navigate('Map')}
-            />
             <SearchBar 
                 term={term} 
                 onTermChange={setTerm}

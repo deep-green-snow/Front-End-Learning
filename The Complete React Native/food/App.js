@@ -9,8 +9,8 @@ const navigator = createStackNavigator({
   ResultsShow: ResultsShowScreen,
   Map: MapScreen
 }, {
-  initialRouteName: 'Search',
-  defaultNavigationOptions: {
+    initialRouteName: 'Search',
+    defaultNavigationOptions: {
     title: 'BusinessSearch'
   }
 });
